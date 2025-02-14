@@ -1,0 +1,74 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffe6f2;
+  color: #d63384;
+  text-align: center;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(45deg, #ff4081, #ff80ab);
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+.album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Estilos para imágenes y videos */
+.image-container, .video-container {
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img, .video-container video {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de hover con corazones */
+.image-container:hover, .video-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(255, 0, 102, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #ff4081;
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Animación de corazones flotantes */
+@keyframes floating-hearts {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 24px;
+  animation: floating-hearts 1.5s linear infinite;
+}
